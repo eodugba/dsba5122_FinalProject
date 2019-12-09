@@ -53,125 +53,90 @@ library(unrtf)
   6.  Run the shiny application.
   
   DATASET STRUCTURE US_TUITION:
-        COLUMN  DATA
-        UNITID	Min.   :100654  
-		    	      1st Qu.:155681  
-		     	      Median :198464  
-		    	      Mean   :231425  
-		    	      3rd Qu.:236212  
-		     	      Max.   :491303  
-        CITY	  Length:43878      
-              	Class :character  
-          		  Mode  :character  
-        STATE	  Length:43878      
-	              Class :character  
-                Mode  :characte  
-        ZIP	    Length:43878      
- 		    ZIP	    Class :character  
- 		    ZIP	    Mode  :character  
-        REGION_CD	Min.   :1.000  
+ COLUMN           DATA
+ UNITID	          Min.   :100654  
+		  1st Qu.:155681  
+		  Median :198464  
+		  Mean   :231425  
+		  3rd Qu.:236212  
+		  Max.   :491303  
+CITY	          Length:43878      
+              	  Class :character  
+                  Mode  :character  
+STATE	          Length:43878      
+	          Class :character  
+                  Mode  :characte  
+ZIP	          Length:43878      
+ 		  Class :character  
+ 		  Mode  :character  
+REGION_CD	  Min.   :1.000  
                   1st Qu.:3.000  
                   Median :5.000  
                   Mean   :4.435  
                   3rd Qu.:6.000  
                   Max.   :9.000  
-        LONGITUDE	Min.   :-159.40  
+LONGITUDE	  Min.   :-159.40  
                   1st Qu.: -96.80  
                   Median : -86.16  
                   Mean   : -90.13  
                   3rd Qu.: -78.87  
                   Max.   : 145.72  
-        LATITUDE	Min.   :13.43  
+LATITUDE	  Min.   :13.43  
                   1st Qu.:34.06  
                   Median :39.25  
                   Mean   :37.87  
                   3rd Qu.:41.65  
                   Max.   :64.86  
- 
-50		     COST	Min.   : 6276  
-51		     COST	1st Qu.:19055  
-52		     COST	Median :24064  
-53		     COST	Mean   :28555  
-54		     COST	3rd Qu.:33232  
-55		     COST	Max.   :72717  
-56		     COST	NA's   :6782  
-57		   REGION	Length:43878      
-58		   REGION	Class :character  
-59		   REGION	Mode  :character  
-60		   REGION	NA
-61		   REGION	NA
-62		   REGION	NA
-63		   REGION	NA
-64		  COLLEGE	Length:43878      
-65		  COLLEGE	Class :character  
-66		  COLLEGE	Mode  :character  
-67		  COLLEGE	NA
-68		  COLLEGE	NA
-69		  COLLEGE	NA
-70		  COLLEGE	NA
-71		  CIPCODE	Length:43878      
-72		  CIPCODE	Class :character  
-73		  CIPCODE	Mode  :character  
-74		  CIPCODE	NA
-75		  CIPCODE	NA
-76		  CIPCODE	NA
-77		  CIPCODE	NA
-78		   COURSE	Length:43878      
-79		   COURSE	Class :character  
-80		   COURSE	Mode  :character  
-81		   COURSE	NA
-82		   COURSE	NA
-83		   COURSE	NA
-84		   COURSE	NA
-85		   CREDLEV	Min.   :1.000  
-86		   CREDLEV	1st Qu.:2.000  
-87		   CREDLEV	Median :3.000  
-88		   CREDLEV	Mean   :3.046  
-89		   CREDLEV	3rd Qu.:3.000  
-90		   CREDLEV	Max.   :8.000  
-91		   CREDLEV	NA
-92		   DEGREE	Length:43878      
-93		   DEGREE	Class :character  
-94		   DEGREE	Mode  :character  
-95		   DEGREE	NA
-96		   DEGREE	NA
-97		   DEGREE	NA
-98		   DEGREE	NA
-99		 MID_EARNING	Min.   :  2700  
-100		 MID_EARNING	1st Qu.: 26700  
-101		 MID_EARNING	Median : 35500  
-102		 MID_EARNING	Mean   : 40060  
-103		 MID_EARNING	3rd Qu.: 49500  
-104		 MID_EARNING	Max.   :231200  
-105		 MID_EARNING	NA
-106		COST_TO_EARNING	Min.   : 0.0807  
-107		COST_TO_EARNING	1st Qu.: 1.0000  
-108		COST_TO_EARNING	Median : 1.3332  
-109		COST_TO_EARNING	Mean   : 1.6387  
-110		COST_TO_EARNING	3rd Qu.: 2.0519  
-111		COST_TO_EARNING	Max.   :10.4099  
-112		COST_TO_EARNING	NA
-113		   EARND	Length:43878      
-114		   EARND	Class :character  
-115		   EARND	Mode  :character  
-116		   EARND	NA
-117		   EARND	NA
-118		   EARND	NA
-119		   EARND	NA
-120		   COSTD	Length:43878      
-121		   COSTD	Class :character  
-122		   COSTD	Mode  :character  
-123		   COSTD	NA
-124		   COSTD	NA
-125		   COSTD	NA
-126		   COSTD	NA
-127		 COSTEARNP	Length:43878      
-128		 COSTEARNP	Class :character  
-129		 COSTEARNP	Mode  :character  
-130		 COSTEARNP	NA
-131		 COSTEARNP	NA
-132		 COSTEARNP	NA
-133		 COSTEARNP	NA
+COST	Min.   : 6276  
+		  1st Qu.:19055  
+		  Median :24064  
+		  Mean   :28555  
+		  3rd Qu.:33232  
+		  Max.   :72717  
+		  NA's   :6782  
+REGION	Length:43878      
+		  Class :character  
+		  Mode  :character  
+COLLEGE	Length:43878      
+		  Class :character  
+		  Mode  :character  
+CIPCODE	Length:43878      
+		  Class :character  
+		  Mode  :character  
+COURSE	Length:43878      
+		  Class :character  
+		  Mode  :character  
+CREDLEV	          Min.   :1.000  
+		  1st Qu.:2.000  
+		  Median :3.000  
+		  Mean   :3.046  
+		  3rd Qu.:3.000  
+		  Max.   :8.000  
+DEGREE	          Length:43878      
+		  Class :character  
+		  Mode  :character  
+MID_EARNING	  Min.   :  2700  
+		  1st Qu.: 26700  
+		  Median : 35500  
+		  Mean   : 40060  
+		  3rd Qu.: 49500  
+		  Max.   :231200  
+COST_TO_EARNING	  Min.   : 0.0807  
+		  1st Qu.: 1.0000  
+		  Median : 1.3332  
+		  Mean   : 1.6387  
+		  3rd Qu.: 2.0519  
+		  Max.   :10.4099  
+EARND	          Length:43878      
+		  Class :character  
+		  Mode  :character  
+COSTD	          Length:43878      
+		  Class :character  
+		  Mode  :character  
+COSTEARNP	  Length:43878      
+		  Class :character  
+		  Mode  :character  
+
   
   
   
