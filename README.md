@@ -64,79 +64,97 @@ library(unrtf)
 CITY	          Length:43878      
               	  Class :character  
                   Mode  :character  
+		  
 STATE	          Length:43878      
 	          Class :character  
-                  Mode  :characte  
+                  Mode  :character  
+		  
 ZIP	          Length:43878      
  		  Class :character  
- 		  Mode  :character  
+ 		  Mode  :character
+		  
 REGION_CD	  Min.   :1.000  
                   1st Qu.:3.000  
                   Median :5.000  
                   Mean   :4.435  
                   3rd Qu.:6.000  
-                  Max.   :9.000  
+                  Max.   :9.000 
+		  
 LONGITUDE	  Min.   :-159.40  
                   1st Qu.: -96.80  
                   Median : -86.16  
                   Mean   : -90.13  
                   3rd Qu.: -78.87  
-                  Max.   : 145.72  
+                  Max.   : 145.72 
+		  
 LATITUDE	  Min.   :13.43  
                   1st Qu.:34.06  
                   Median :39.25  
                   Mean   :37.87  
                   3rd Qu.:41.65  
-                  Max.   :64.86  
+                  Max.   :64.86
+		  
 COST	Min.   : 6276  
 		  1st Qu.:19055  
 		  Median :24064  
 		  Mean   :28555  
 		  3rd Qu.:33232  
 		  Max.   :72717  
-		  NA's   :6782  
+		  NA's   :6782 
+		  
 REGION	Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character
+		  
 COLLEGE	Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character 
+		  
 CIPCODE	Length:43878      
 		  Class :character  
 		  Mode  :character  
+		  
 COURSE	Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character 
+		  
 CREDLEV	          Min.   :1.000  
 		  1st Qu.:2.000  
 		  Median :3.000  
 		  Mean   :3.046  
 		  3rd Qu.:3.000  
 		  Max.   :8.000  
+		  
 DEGREE	          Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character 
+		  
 MID_EARNING	  Min.   :  2700  
 		  1st Qu.: 26700  
 		  Median : 35500  
 		  Mean   : 40060  
 		  3rd Qu.: 49500  
-		  Max.   :231200  
+		  Max.   :231200 
+		  
 COST_TO_EARNING	  Min.   : 0.0807  
 		  1st Qu.: 1.0000  
 		  Median : 1.3332  
 		  Mean   : 1.6387  
 		  3rd Qu.: 2.0519  
-		  Max.   :10.4099  
+		  Max.   :10.4099 
+		  
 EARND	          Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character 
+		  
 COSTD	          Length:43878      
 		  Class :character  
-		  Mode  :character  
+		  Mode  :character 
+		  
 COSTEARNP	  Length:43878      
 		  Class :character  
 		  Mode  :character  
+		  
 
   
   
