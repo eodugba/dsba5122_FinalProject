@@ -51,6 +51,7 @@ library(rsconnect)
 library(shinydashboard)
 library(unrtf)
   6.  Run the shiny application.
+      R -e "shiny::runApp('~/app')"
   
   DATASET STRUCTURE US_TUITION:
 
