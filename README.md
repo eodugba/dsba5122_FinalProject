@@ -30,7 +30,7 @@ When the tool is launched, the side bar on the left provides customizable filter
   
   Some schools did not report data or choose to keep their data private.  These colleges were removed from the dataset.   College with no earning data were automatically removed.  Cost was set to zero for colleges with no cost data but had earning data.
   
-  How to Build:
+  HOW TO BUILD:
   1.  Download all Files.
   2.  Get RStudio or any development environment that allows the execution of Shiny applications
   3.  Create a Directory called "DATA"
