@@ -53,13 +53,14 @@ library(unrtf)
   6.  Run the shiny application.
   
   DATASET STRUCTURE US_TUITION:
- COLUMN           DATA
+
  UNITID	          Min.   :100654  
 		  1st Qu.:155681  
 		  Median :198464  
 		  Mean   :231425  
 		  3rd Qu.:236212  
 		  Max.   :491303  
+		  
 CITY	          Length:43878      
               	  Class :character  
                   Mode  :character  
