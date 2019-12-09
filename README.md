@@ -52,6 +52,7 @@ library(shinydashboard)
 library(unrtf)
   6.  Run the shiny application.
       R -e "shiny::runApp('~/app')"
+      By default runApp starts the application on a randomly selected port. For example, it might start on port 4700, in 	which case you can connect to the running application by navigating your browser to http://localhost:4700.
   
   DATASET STRUCTURE US_TUITION:
 
