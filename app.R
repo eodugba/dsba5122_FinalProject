@@ -19,35 +19,6 @@ library(rsconnect)
 library(shinydashboard)
 library(unrtf)
 
-
-us_states <- map_data("state")
-US.map <- map_data('state')
-#  Get the most recent tuition data 
-mrfde <- read_csv("data/Most-Recent-Field-Data-Elements.csv")
-# The most recent tuition data by course
-mrcade <- read_csv("data/Most-Recent-Cohorts-All-Data-Elements.csv")
-# Extract out distinct courses
-course <- distinct(mrfde,CIPDESC,CIPCODE) %>% arrange(CIPDESC)
-# Remove rows that the earnings is classified private.  They were not provided
-course_earning <- filter(mrfde, MD_EARN_WNE != "PrivacySuppressed") 
-# Create a dataset for earnings by course
-mrfde_subset <- select(course_earning,UNITID,COLLEGE = INSTNM,CIPCODE,COURSE = CIPDESC,CREDLEV,DEGREE = CREDDESC,MID_EARNING = MD_EARN_WNE)
-# Get college geo location and cost
-mrcade_attr <- select(mrcade, UNITID,CITY,STATE = STABBR,ZIP,REGION_CD = REGION,LONGITUDE,LATITUDE,COST =  COSTT4_A) 
-# Attach Region to college geo data
-mrcade_attr <- mutate(mrcade_attr, REGION = case_when(REGION_CD == 5 ~ "Southern", REGION_CD ==1 ~ "New England", REGION_CD == 2 ~ "Mideast", REGION_CD == 3 ~ "Great Lakes", REGION_CD == 4 ~ "Plains", REGION_CD == 6 ~ "Southwest",REGION_CD == 7 ~ "Rocky Mountains",REGION_CD == 8 ~ "Far West", REGION_CD == 9 ~ "Common Wealth", TRUE ~ "Unknown"))
-# Merge course data and college geo data
-US_TUITION <- inner_join(mrcade_attr, mrfde_subset, by = "UNITID")
-# Convert Cost and Earnings to numeric.
-US_TUITION = transform(US_TUITION, COST = as.numeric(COST),MID_EARNING = as.numeric(MID_EARNING))
-# Calculate earnings to cost 
-US_TUITION = mutate(US_TUITION, COST_TO_EARNING = ifelse(is.na(COST),1.0,MID_EARNING/COST))
-# Create dollar fields for cost and earnings to be displayed in shiny
-US_TUITION <- mutate(US_TUITION, EARND = scales::dollar(MID_EARNING))
-US_TUITION <- mutate(US_TUITION, COSTD = scales::dollar(COST))
-# Create percent earning to cost field for display
-US_TUITION <- mutate(US_TUITION, COSTEARNP = scales::percent(COST_TO_EARNING))
-
 ui <- dashboardPage(
 
   dashboardHeader(title = "Career Guidance Tool"),
@@ -551,6 +522,10 @@ ui <- dashboardPage(
           }
           .main-sidebar {
             background-color: 	#1e78d2 !important;
+            text
+          }
+          .skin-blue .main-sidebar .sidebar{
+          color: black
           }
          .skin-blue .main-header .logo {
                               background-color: chocolate
